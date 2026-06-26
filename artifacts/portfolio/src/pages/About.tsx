@@ -8,10 +8,10 @@ const fadeUp = {
 };
 
 const principles = [
-  { icon: Target, title: "Outcome over output", desc: "Shipping features is easy. Shipping features that move the needle is the job." },
-  { icon: BarChart3, title: "Data-informed, not data-driven", desc: "Numbers tell you what happened. Context tells you why. I use both." },
-  { icon: Layers, title: "Systems thinking", desc: "Every product decision is a constraint on the next one. I design for compounding." },
-  { icon: Users, title: "User proximity", desc: "I talk to users weekly. Assumptions are expensive. Conversations are not." },
+  { icon: Target, title: "Infrastructure is product", desc: "Payment routing, uptime, and settlement aren't backend concerns — they're the product. Reliability is a feature." },
+  { icon: BarChart3, title: "Data-informed, not data-blind", desc: "Success rates, failure patterns, channel health — I track what matters and let the data surface where to dig." },
+  { icon: Layers, title: "Localisation is a strategy", desc: "Copying a product across markets doesn't work in Africa. Regulations, user habits, and partner ecosystems vary enormously." },
+  { icon: Users, title: "Operators are users too", desc: "Merchants, agents, and partner banks are as much my users as end consumers. I design for the full ecosystem." },
 ];
 
 export default function About() {
@@ -40,13 +40,13 @@ export default function About() {
           {/* Bio */}
           <motion.div custom={2} variants={fadeUp} initial="hidden" animate="visible" className="md:col-span-3 space-y-5">
             <p className="text-foreground leading-relaxed">
-              I'm a Product Manager who operates at the intersection of customer empathy, business strategy, and technical execution. I've led products from zero-to-one and scaled them through hypergrowth — and I've learned that the most important PM skill is knowing which problem to solve next.
+              I'm a Product Manager with 5+ years of experience building and scaling payment infrastructure products across fintech and digital financial services in Africa. Based in Lagos, I've shipped products that process millions of transactions across Nigeria, Kenya, Tanzania, Ghana, and Uganda.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              My approach is grounded in structured frameworks — I think in terms of north star metrics, opportunity trees, and prioritization models — but I'm just as comfortable in a whiteboard session with engineers or a discovery call with a frustrated user.
+              My work spans offline and online acquiring, payment routing, EFT processing, collections, cross-border payments, web3 onchain marketplaces, and merchant payment solutions. I've led everything from NIBSS platform migrations to mobile money rollouts with Airtel Money, M-Pesa, and Tigo Pesa.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Before moving into product, I spent time in strategy consulting, which gave me a deep respect for first-principles thinking and the ability to communicate complex tradeoffs clearly to executive stakeholders.
+              Before moving into a pure PM role, I spent time in payment operations — maintaining 99.2% uptime across live POS and card payment channels. That experience gave me a ground-level understanding of where payment systems break and what reliability actually costs. It shapes every product decision I make today.
             </p>
             <div className="pt-4">
               <Link href="/contact">

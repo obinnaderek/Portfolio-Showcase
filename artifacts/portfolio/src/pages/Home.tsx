@@ -35,7 +35,7 @@ export default function Home() {
               <span className="text-primary">Chukwuemeka</span>
             </motion.h1>
             <motion.p custom={2} variants={fadeUp} className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-              I build products that ship on time, scale under pressure, and actually solve the problems users have — not the ones they describe.
+              5+ years building and scaling payment infrastructure across Africa. From POS acquiring to mobile money, cross-border payments to embedded lending — I ship products that move money reliably.
             </motion.p>
             <motion.div custom={3} variants={fadeUp} className="flex flex-wrap gap-4">
               <Link href="/projects">
@@ -66,9 +66,9 @@ export default function Home() {
             className="mt-20 grid grid-cols-3 gap-8 max-w-lg"
           >
             {[
-              { value: "7+", label: "Years in Product" },
-              { value: "12+", label: "Products Shipped" },
-              { value: "3", label: "Sectors Covered" },
+              { value: "5+", label: "Years in Product" },
+              { value: "5", label: "African Markets" },
+              { value: "3", label: "Payment Verticals" },
             ].map((stat) => (
               <div key={stat.label} className="border-l border-border pl-4">
                 <p className="text-2xl font-bold text-primary font-mono">{stat.value}</p>

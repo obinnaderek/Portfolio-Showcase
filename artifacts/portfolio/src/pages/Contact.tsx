@@ -176,17 +176,13 @@ export default function Contact() {
             <div className="border border-border rounded p-5">
               <p className="font-mono text-xs text-primary tracking-widest uppercase mb-4">Connect</p>
               <div className="space-y-3">
-                <a href="mailto:obinna@example.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="mailto:Obinna2110@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <Mail size={14} className="text-primary" />
-                  obinna@example.com
+                  Obinna2110@gmail.com
                 </a>
-                <a href="#" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="https://www.linkedin.com/in/obinna-chukwuemeka-a1p/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <Linkedin size={14} className="text-primary" />
-                  LinkedIn
-                </a>
-                <a href="#" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  <Github size={14} className="text-primary" />
-                  GitHub
+                  linkedin.com/in/obinna-chukwuemeka-a1p
                 </a>
               </div>
             </div>
@@ -199,10 +195,10 @@ export default function Contact() {
             <div className="border border-border rounded p-5">
               <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">Open to</p>
               <ul className="space-y-1.5 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2"><span className="text-primary">›</span> Full-time PM roles</li>
-                <li className="flex items-center gap-2"><span className="text-primary">›</span> Product advisory</li>
-                <li className="flex items-center gap-2"><span className="text-primary">›</span> Speaking & panels</li>
-                <li className="flex items-center gap-2"><span className="text-primary">›</span> Interesting conversations</li>
+                <li className="flex items-center gap-2"><span className="text-primary">›</span> Senior PM / Lead PM roles</li>
+                <li className="flex items-center gap-2"><span className="text-primary">›</span> Payments & fintech product advisory</li>
+                <li className="flex items-center gap-2"><span className="text-primary">›</span> African market expansion consulting</li>
+                <li className="flex items-center gap-2"><span className="text-primary">›</span> Speaking & panels on African fintech</li>
               </ul>
             </div>
           </motion.div>
