@@ -16,7 +16,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">Portfolio</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Case Studies</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">My Projects</h1>
           <p className="text-muted-foreground max-w-xl mb-10">
             Selected work — each one a story of a problem discovered, a bet placed, and an outcome measured.
           </p>

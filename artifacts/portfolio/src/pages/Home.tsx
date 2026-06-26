@@ -86,7 +86,7 @@ export default function Home() {
             <div className="flex items-center justify-between mb-12">
               <div>
                 <p className="font-mono text-xs text-primary tracking-widest uppercase mb-2">Selected Work</p>
-                <h2 className="text-3xl font-bold text-foreground">Case Studies</h2>
+                <h2 className="text-3xl font-bold text-foreground">My Projects</h2>
               </div>
               <Link href="/projects">
                 <span className="font-mono text-xs text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
