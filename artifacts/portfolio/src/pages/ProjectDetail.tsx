@@ -3,6 +3,58 @@ import { Link } from "wouter";
 import { ArrowLeft, Calendar, Briefcase, Building2, TrendingUp } from "lucide-react";
 import { useGetProject, getGetProjectQueryKey } from "@workspace/api-client-react";
 
+function renderDescription(text: string) {
+  const paragraphs = text.split(/\n\n+/);
+  return paragraphs.map((block, i) => {
+    const lines = block.split("\n").map(l => l.trim()).filter(Boolean);
+    if (!lines.length) return null;
+
+    const isBulletBlock = lines.every(l => l.startsWith("- "));
+    if (isBulletBlock) {
+      return (
+        <ul key={i} className="space-y-2 pl-4 border-l border-primary/30">
+          {lines.map((l, j) => (
+            <li key={j} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
+              <span className="text-primary mt-1 shrink-0">›</span>
+              <span>{l.slice(2)}</span>
+            </li>
+          ))}
+        </ul>
+      );
+    }
+
+    const hasBullets = lines.some(l => l.startsWith("- "));
+    if (hasBullets) {
+      return (
+        <div key={i} className="space-y-2">
+          {lines.map((l, j) =>
+            l.startsWith("- ") ? (
+              <div key={j} className="flex gap-2 pl-4">
+                <span className="text-primary shrink-0">›</span>
+                <span className="text-sm text-muted-foreground leading-relaxed">{l.slice(2)}</span>
+              </div>
+            ) : (
+              <p key={j} className="text-sm text-muted-foreground leading-relaxed">{l}</p>
+            )
+          )}
+        </div>
+      );
+    }
+
+    if (lines.length === 1 && lines[0].length < 60 && !lines[0].endsWith(".")) {
+      return (
+        <p key={i} className="font-mono text-xs text-primary tracking-widest uppercase pt-4">{lines[0]}</p>
+      );
+    }
+
+    return (
+      <p key={i} className="text-sm text-muted-foreground leading-relaxed">
+        {lines.join(" ")}
+      </p>
+    );
+  });
+}
+
 export default function ProjectDetail({ id }: { id: number }) {
   const { data: project, isLoading } = useGetProject(id, {
     query: { enabled: !!id, queryKey: getGetProjectQueryKey(id) },
@@ -117,8 +169,8 @@ export default function ProjectDetail({ id }: { id: number }) {
           {project.description && (
             <div className="border-t border-border pt-10">
               <p className="font-mono text-xs text-primary tracking-widest uppercase mb-6">Deep Dive</p>
-              <div className="prose prose-invert prose-sm max-w-none text-muted-foreground leading-relaxed whitespace-pre-line">
-                {project.description}
+              <div className="max-w-none space-y-4">
+                {renderDescription(project.description)}
               </div>
             </div>
           )}
