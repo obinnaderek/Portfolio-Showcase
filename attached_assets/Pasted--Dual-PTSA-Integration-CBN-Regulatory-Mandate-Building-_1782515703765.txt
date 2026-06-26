@@ -1,0 +1,121 @@
+# Dual PTSA Integration (CBN Regulatory Mandate)
+
+### Building a Resilient Payment Routing Infrastructure in Nigeria
+
+At Jupiter Payment Service Limited, I led the product management and delivery of a Dual PTSA (Payment Terminal Service Aggregator) integration initiative mandated by the Central Bank of Nigeria (CBN). The initiative was not optional; it was a regulatory requirement aimed at strengthening resilience and reducing systemic risk in Nigeria’s payment terminal ecosystem.
+
+For context, PTSA providers sit at a critical layer in Nigeria’s payment infrastructure. They act as intermediaries between Payment Terminal Service Providers (PTSPs), processors, and switching systems, ensuring that POS transactions are properly routed, authenticated, and processed. Prior to this initiative, Jupiter relied on a single PTSA integration, which meant that the entire transaction routing layer was dependent on one external system. This created a structural risk in terms of both availability and regulatory compliance.
+
+The CBN’s directive introduced a new expectation: all PSPs and PTSPs must implement dual connectivity to approved PTSA providers. In practical terms, this meant that Jupiter needed to redesign its transaction routing architecture to support two independent PTSA integrations — NIBSS and UPSL — without disrupting live merchant operations.
+
+---
+
+## Understanding the Problem Space
+
+When I began the project, the challenge was not simply about adding another integration. It was about redesigning how transaction routing works at a system level while ensuring zero disruption to merchants who depend on POS transactions for daily business operations.
+
+The core problem could be summarized as:
+
+How do we introduce a dual-routing architecture that ensures regulatory compliance, improves system resilience, and maintains transaction integrity across multiple PTSA providers with different technical specifications?
+
+The complexity of this problem was driven by several factors:
+
+First, both PTSA providers (NIBSS and UPSL) implemented ISO 8583 messaging standards, but with subtle differences in field definitions, required data elements, and message handling behavior. This meant that a “one-size-fits-all” integration approach was not possible.
+
+Second, the existing system architecture was built around a single routing path. Introducing a second PTSA meant that routing logic had to be rethought entirely, including how requests are directed, how failover is handled, and how transaction consistency is maintained.
+
+Third, the solution had to be implemented without disrupting ongoing POS transactions across thousands of merchants. In the payments world, even small disruptions translate directly into financial loss and trust erosion.
+
+---
+
+## Discovery and Product Definition
+
+I started by leading a structured discovery phase that brought together internal engineering teams, compliance stakeholders, and external PTSA providers. The goal was to translate a regulatory mandate into a clear and executable product specification.
+
+A significant part of this phase involved working directly with both NIBSS and UPSL to obtain their technical specifications, which included ISO 8583 message formats, endpoint definitions, security requirements, and connectivity models.
+
+However, what quickly became clear was that the two providers were not symmetrical in implementation. While they adhered to the same ISO standard, the interpretation of fields, required parameters, and security layers differed. This meant that before any engineering work could begin, we needed to define a normalization layer that would standardize how transaction messages are processed internally before being routed externally.
+
+I documented these findings in a comprehensive Product Requirements Document (PRD), which included:
+
+* A detailed breakdown of required ISO 8583 field mappings across both PTSA systems
+* Definition of service endpoints and routing behavior
+* Security and encryption requirements for each integration
+* Failure handling and retry logic
+* Expected transaction flow across dual routes
+
+This document became the foundation for both engineering implementation and compliance validation.
+
+---
+
+## Designing the Dual Routing Architecture
+
+The key design decision in this project was to decouple transaction processing from routing logic.
+
+Instead of tightly coupling POS transaction flows to a single PTSA endpoint, we introduced an intermediary routing layer within Jupiter’s infrastructure. This layer became responsible for determining which PTSA (NIBSS or UPSL) should process a given transaction based on predefined routing logic and system availability.
+
+At a high level, the architecture worked as follows:
+
+When a POS transaction is initiated, the request is first received by Jupiter’s switching layer. This layer validates the transaction and normalizes the ISO 8583 message format into a standardized internal structure. From there, the routing engine evaluates available PTSA endpoints and determines the appropriate destination based on availability, configuration rules, and system health.
+
+Once the destination is selected, the transaction is forwarded to either NIBSS or UPSL through their respective secure communication channels. Each PTSA processes the transaction and returns a response, which is then normalized again before being sent back to the originating POS terminal.
+
+A critical aspect of this design was ensuring that both PTSA integrations could operate independently without interfering with each other, while still maintaining consistency at the merchant level.
+
+---
+
+## Execution and Cross-Functional Coordination
+
+From an execution standpoint, this project required deep coordination across multiple teams and external stakeholders.
+
+I worked closely with engineering teams to translate the PRD into technical implementation specifications, ensuring clarity on field mappings, endpoint configurations, and routing logic behavior. Given the sensitivity of payment infrastructure systems, even small ambiguities in requirements could lead to transaction failures, so I maintained continuous alignment throughout development.
+
+On the external side, I coordinated directly with both PTSA providers to validate integration requirements, clarify inconsistencies in specifications, and ensure that our implementation met their technical and security expectations.
+
+One of the more complex aspects of execution was managing differences in connectivity and security models. Each PTSA had its own requirements around authentication, key exchange, and encryption layers. Rather than forcing a unified approach externally, we designed the system to support provider-specific security configurations while maintaining a unified internal routing structure.
+
+---
+
+## Testing, UAT, and Validation
+
+Given the critical nature of POS transactions, testing was treated as a phased and controlled process.
+
+I led the design and execution of User Acceptance Testing (UAT), which included validating transaction flows across both PTSA endpoints under different scenarios. This included normal transaction processing, failover behavior, and edge cases such as network instability and endpoint downtime.
+
+We also validated ISO 8583 field mappings extensively to ensure that transaction messages were correctly interpreted by both systems. Any mismatch in field interpretation had the potential to result in transaction rejection or settlement errors, so this phase was particularly rigorous.
+
+The UAT phase also served as a final compliance validation checkpoint, ensuring that the system met all regulatory requirements before production rollout.
+
+---
+
+## Challenges and How They Were Solved
+
+One of the primary challenges was managing inconsistencies between the two PTSA implementations of the ISO 8583 standard. While both systems adhered to the same protocol, they differed in how certain fields were interpreted and enforced.
+
+To solve this, I introduced a normalization layer within the internal routing architecture. This ensured that all incoming and outgoing messages were standardized before being processed or transmitted externally.
+
+Another challenge was coordinating testing across multiple stakeholders, each with different environments and constraints. To address this, I structured the UAT process into clearly defined phases, with specific test cases mapped to each PTSA provider, ensuring controlled validation and traceability.
+
+---
+
+## Outcome and Impact
+
+The successful implementation of the Dual PTSA integration resulted in full compliance with CBN regulatory requirements and significantly improved the resilience of Jupiter’s payment infrastructure.
+
+More importantly, it eliminated the single point of failure that previously existed in the transaction routing system and introduced a scalable architecture capable of supporting future PTSA integrations without major redesign.
+
+From a business and operational standpoint, the system is now more robust, more flexible, and better positioned to handle high-volume transaction environments with improved reliability.
+
+---
+
+## What This Project Demonstrates
+
+This initiative reflects experience in building and managing complex payment infrastructure systems under regulatory constraints. It demonstrates the ability to translate regulatory mandates into technical product requirements, design resilient system architectures, and coordinate execution across engineering, compliance, and external financial infrastructure partners.
+
+More broadly, it highlights capability in:
+
+* Payment switching and routing architecture design
+* ISO 8583-based financial messaging systems
+* Regulatory product management in financial services
+* Multi-stakeholder execution across banks, processors, and fintech infrastructure providers
+* Designing for resilience, scalability, and compliance in mission-critical systems
