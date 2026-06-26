@@ -1,22 +1,24 @@
 openapi: 3.1.0
 info:
-  # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
-  description: API specification
+  description: Portfolio API
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: contact
+    description: Contact form
+  - name: content
+    description: Portfolio content
 paths:
   /healthz:
     get:
       operationId: healthCheck
       tags: [health]
       summary: Health check
-      description: Returns server health status
       responses:
         "200":
           description: Healthy
@@ -24,6 +26,143 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+
+  /contact:
+    post:
+      operationId: submitContact
+      tags: [contact]
+      summary: Submit contact form
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactInput"
+      responses:
+        "200":
+          description: Message sent
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactResult"
+
+  /projects:
+    get:
+      operationId: listProjects
+      tags: [content]
+      summary: List portfolio projects
+      responses:
+        "200":
+          description: Projects list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Project"
+
+  /projects/{id}:
+    get:
+      operationId: getProject
+      tags: [content]
+      summary: Get single project / case study
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Project detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Project"
+        "404":
+          description: Not found
+
+  /blog:
+    get:
+      operationId: listPosts
+      tags: [content]
+      summary: List blog posts
+      responses:
+        "200":
+          description: Blog posts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/BlogPost"
+
+  /blog/{id}:
+    get:
+      operationId: getBlogPost
+      tags: [content]
+      summary: Get single blog post
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Blog post detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BlogPost"
+        "404":
+          description: Not found
+
+  /testimonials:
+    get:
+      operationId: listTestimonials
+      tags: [content]
+      summary: List testimonials
+      responses:
+        "200":
+          description: Testimonials
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Testimonial"
+
+  /skills:
+    get:
+      operationId: listSkills
+      tags: [content]
+      summary: List skills grouped by category
+      responses:
+        "200":
+          description: Skills list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SkillGroup"
+
+  /experience:
+    get:
+      operationId: listExperience
+      tags: [content]
+      summary: List work experience
+      responses:
+        "200":
+          description: Experience list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Experience"
+
 components:
   schemas:
     HealthStatus:
@@ -34,3 +173,144 @@ components:
       required:
         - status
 
+    ContactInput:
+      type: object
+      required: [name, email, message]
+      properties:
+        name:
+          type: string
+          minLength: 1
+        email:
+          type: string
+          format: email
+        subject:
+          type: string
+        message:
+          type: string
+          minLength: 1
+
+    ContactResult:
+      type: object
+      required: [success, message]
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+
+    Project:
+      type: object
+      required: [id, title, summary, tags, featured]
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        summary:
+          type: string
+        description:
+          type: ["string", "null"]
+        tags:
+          type: array
+          items:
+            type: string
+        featured:
+          type: boolean
+        imageUrl:
+          type: ["string", "null"]
+        outcome:
+          type: ["string", "null"]
+        role:
+          type: ["string", "null"]
+        duration:
+          type: ["string", "null"]
+        company:
+          type: ["string", "null"]
+        impact:
+          type: array
+          items:
+            type: string
+
+    BlogPost:
+      type: object
+      required: [id, title, excerpt, publishedAt, readTime]
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        excerpt:
+          type: string
+        content:
+          type: ["string", "null"]
+        publishedAt:
+          type: string
+        readTime:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        coverImageUrl:
+          type: ["string", "null"]
+
+    Testimonial:
+      type: object
+      required: [id, author, role, company, quote]
+      properties:
+        id:
+          type: integer
+        author:
+          type: string
+        role:
+          type: string
+        company:
+          type: string
+        quote:
+          type: string
+        avatarUrl:
+          type: ["string", "null"]
+
+    SkillGroup:
+      type: object
+      required: [category, skills]
+      properties:
+        category:
+          type: string
+        skills:
+          type: array
+          items:
+            $ref: "#/components/schemas/Skill"
+
+    Skill:
+      type: object
+      required: [name, level]
+      properties:
+        name:
+          type: string
+        level:
+          type: integer
+          description: Proficiency 1-5
+
+    Experience:
+      type: object
+      required: [id, company, role, startDate, description]
+      properties:
+        id:
+          type: integer
+        company:
+          type: string
+        role:
+          type: string
+        startDate:
+          type: string
+        endDate:
+          type: ["string", "null"]
+        description:
+          type: string
+        highlights:
+          type: array
+          items:
+            type: string
+        logoUrl:
+          type: ["string", "null"]
