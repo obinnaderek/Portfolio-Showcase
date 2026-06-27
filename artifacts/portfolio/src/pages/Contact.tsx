@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { CheckCircle, Mail, Linkedin, Github } from "lucide-react";
+import { CheckCircle, Mail, Linkedin, Github, Phone } from "lucide-react";
 import { useSubmitContact } from "@workspace/api-client-react";
 import {
   Form,
@@ -184,21 +184,25 @@ export default function Contact() {
                   <Linkedin size={14} className="text-primary" />
                   linkedin.com/in/obinna-chukwuemeka-a1p
                 </a>
+                <a href="https://wa.me/2348036400843" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <Phone size={14} className="text-primary" />
+                  +234 803 640 0843 (WhatsApp)
+                </a>
               </div>
             </div>
 
             <div className="border border-border rounded p-5">
               <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">Response time</p>
-              <p className="text-sm text-muted-foreground">Usually within 24-48 hours on business days.</p>
+              <p className="text-sm text-muted-foreground">Usually within 5 to 24 hours.</p>
             </div>
 
             <div className="border border-border rounded p-5">
               <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">Open to</p>
               <ul className="space-y-1.5 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2"><span className="text-primary">›</span> Senior PM / Lead PM roles</li>
-                <li className="flex items-center gap-2"><span className="text-primary">›</span> Payments & fintech product advisory</li>
-                <li className="flex items-center gap-2"><span className="text-primary">›</span> African market expansion consulting</li>
-                <li className="flex items-center gap-2"><span className="text-primary">›</span> Speaking & panels on African fintech</li>
+                <li className="flex items-center gap-2"><span className="text-primary">›</span> Technical Product Manager</li>
+                <li className="flex items-center gap-2"><span className="text-primary">›</span> Operations Manager</li>
+                <li className="flex items-center gap-2"><span className="text-primary">›</span> Consulting roles</li>
+                <li className="flex items-center gap-2"><span className="text-primary">›</span> Remote / worldwide</li>
               </ul>
             </div>
           </motion.div>
