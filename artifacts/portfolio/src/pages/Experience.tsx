@@ -21,8 +21,10 @@ export default function Experience() {
   const { data: experience, isLoading } = useListExperience();
 
   return (
-    <div className="min-h-screen pt-24 pb-20">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="min-h-screen pt-24 pb-20 relative overflow-hidden">
+      <div className="absolute inset-0 hero-grid opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 section-glow-right pointer-events-none" />
+      <div className="max-w-4xl mx-auto px-6 relative">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">Career</p>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Experience</h1>

@@ -18,8 +18,10 @@ const principles = [
 
 export default function About() {
   return (
-    <div className="min-h-screen pt-24 pb-20">
-      <div className="max-w-5xl mx-auto px-6">
+    <div className="min-h-screen pt-24 pb-20 relative overflow-hidden">
+      <div className="absolute inset-0 hero-grid opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 section-glow-left pointer-events-none" />
+      <div className="max-w-5xl mx-auto px-6 relative">
         <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible">
           <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">About</p>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-12">The PM behind the work</h1>
@@ -33,7 +35,7 @@ export default function About() {
                 <div className="w-20 h-20 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center mx-auto mb-3">
                   <span className="font-mono text-2xl font-bold text-primary">OC</span>
                 </div>
-                <p className="font-mono text-xs text-muted-foreground">Obinna Chukwuemeka</p>
+                <p className="font-mono text-xs text-muted-foreground">Obinna Derek Chukwuemeka</p>
                 <p className="font-mono text-xs text-primary">Product Manager</p>
               </div>
             </div>

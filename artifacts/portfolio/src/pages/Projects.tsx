@@ -12,8 +12,10 @@ export default function Projects() {
   const filtered = filter ? projects?.filter((p) => p.tags.includes(filter)) : projects;
 
   return (
-    <div className="min-h-screen pt-24 pb-20">
-      <div className="max-w-6xl mx-auto px-6">
+    <div className="min-h-screen pt-24 pb-20 relative overflow-hidden">
+      <div className="absolute inset-0 hero-grid opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 section-glow-left pointer-events-none" />
+      <div className="max-w-6xl mx-auto px-6 relative">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">Portfolio</p>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">My Projects</h1>

@@ -7,8 +7,6 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Projects from "@/pages/Projects";
 import ProjectDetail from "@/pages/ProjectDetail";
-import Blog from "@/pages/Blog";
-import BlogPost from "@/pages/BlogPost";
 import Experience from "@/pages/Experience";
 import Skills from "@/pages/Skills";
 import Testimonials from "@/pages/Testimonials";
@@ -29,12 +27,6 @@ function Router() {
         </Route>
         <Route path="/projects/:id">
           {(params) => <ProjectDetail id={parseInt(params.id, 10)} />}
-        </Route>
-        <Route path="/blog">
-          {() => <Blog />}
-        </Route>
-        <Route path="/blog/:id">
-          {(params) => <BlogPost id={parseInt(params.id, 10)} />}
         </Route>
         <Route path="/experience" component={Experience} />
         <Route path="/skills" component={Skills} />
