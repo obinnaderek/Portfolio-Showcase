@@ -35,7 +35,7 @@ export default function Home() {
               <span className="text-primary">Chukwuemeka</span>
             </motion.h1>
             <motion.p custom={2} variants={fadeUp} className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-              5+ years building and scaling payment infrastructure across Africa. From POS acquiring to mobile money, cross-border payments to embedded lending — I ship products that move money reliably.
+              Technical Product Manager with 5+ years of experience building and scaling payment infrastructure products across fintech and digital financial services. Experienced in both offline and online acquiring, payment routing, EFT processing, collections, cross-border payments, web3 onchain marketplace, and merchant payment solutions across multiple African markets.
             </motion.p>
             <motion.div custom={3} variants={fadeUp} className="flex flex-wrap gap-4">
               <Link href="/projects">
