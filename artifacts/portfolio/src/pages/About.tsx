@@ -36,7 +36,7 @@ export default function About() {
                   <span className="font-mono text-2xl font-bold text-primary">OC</span>
                 </div>
                 <p className="font-mono text-xs text-muted-foreground">Obinna Derek Chukwuemeka</p>
-                <p className="font-mono text-xs text-primary">Product Manager</p>
+                <p className="font-mono text-xs text-primary">Technical Product Manager</p>
               </div>
             </div>
           </motion.div>
@@ -44,7 +44,7 @@ export default function About() {
           {/* Bio */}
           <motion.div custom={2} variants={fadeUp} initial="hidden" animate="visible" className="md:col-span-3 space-y-5">
             <p className="text-foreground leading-relaxed">
-              I'm a Product Manager with 5+ years of experience building and scaling payment infrastructure products across fintech and digital financial services in Africa. Based in Lagos, I've shipped products that serve millions of users across Nigeria, Kenya, Tanzania, Ghana, and Uganda — spanning offline and online acquiring, payment routing, EFT processing, collections, cross-border payments, and merchant solutions.
+              I'm a Technical Product Manager with 5+ years of experience building and scaling payment infrastructure products across fintech and digital financial services in Africa. Based in Lagos, I've shipped products that serve millions of users across Nigeria, Kenya, Tanzania, Ghana, and Uganda — spanning offline and online acquiring, payment routing, EFT processing, collections, cross-border payments, and merchant solutions.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               My path into product management started in operations. At UBA PLC, I was a second-level technical support specialist at the head office, responsible for POS and offline payment operations across 19 countries. I resolved merchant issues from across the continent daily — authorization failures, settlement discrepancies, terminal connectivity problems, card scheme escalations. That experience taught me exactly where payment systems break and why. But more than that, it taught me something more useful: that I didn't want to just resolve the problems. I wanted to understand them deeply enough to not build them in the first place.

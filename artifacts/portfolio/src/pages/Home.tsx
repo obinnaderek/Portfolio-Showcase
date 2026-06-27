@@ -36,7 +36,7 @@ export default function Home() {
             className="max-w-3xl"
           >
             <motion.p custom={0} variants={fadeUp} className="font-mono text-xs text-primary tracking-widest uppercase mb-4">
-              Product Manager
+              Technical Product Manager
             </motion.p>
             <motion.h1 custom={1} variants={fadeUp} className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-none mb-6">
               Obinna Derek<br />
