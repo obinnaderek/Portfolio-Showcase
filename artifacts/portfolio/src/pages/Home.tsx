@@ -43,7 +43,7 @@ export default function Home() {
               <span className="text-primary">Chukwuemeka</span>
             </motion.h1>
             <motion.p custom={2} variants={fadeUp} className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-              I build digital payment solutions — B2B, B2C, and C2B platforms — that reshape how businesses and consumers move money. Launched cross-border payment products across multiple African markets, scaled platform-as-a-service and SaaS financial products, and led acquiring infrastructure from concept to production.
+              I build digital payment solutions that reshape how businesses and consumers move money across Africa and beyond. From B2B and C2B platforms to SaaS and platform-as-a-service products, I have launched cross-border payment infrastructure, scaled acquiring systems, and delivered financial products that serve real users at real scale.
             </motion.p>
             <motion.div custom={3} variants={fadeUp} className="flex flex-wrap gap-4">
               <Link href="/projects">
