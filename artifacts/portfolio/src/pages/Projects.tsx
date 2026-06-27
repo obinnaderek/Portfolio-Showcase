@@ -20,7 +20,7 @@ export default function Projects() {
           <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">Portfolio</p>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">My Projects</h1>
           <p className="text-muted-foreground max-w-xl mb-10">
-            Selected work — each one a story of a problem discovered, a bet placed, and an outcome measured.
+            Selected work. Each one is a story of a problem discovered, a bet placed, and an outcome measured.
           </p>
         </motion.div>
 

@@ -48,7 +48,7 @@ export default function Contact() {
           <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">Contact</p>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Get in Touch</h1>
           <p className="text-muted-foreground mb-12 max-w-xl">
-            Whether it's a product role, a collaboration, or just a good conversation about building things — I'm open to it.
+            Whether it's a product role, a collaboration, or just a good conversation about building things, I am open to it.
           </p>
         </motion.div>
 

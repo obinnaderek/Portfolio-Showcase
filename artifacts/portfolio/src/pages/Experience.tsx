@@ -78,7 +78,7 @@ export default function Experience() {
                         <p className="text-primary font-mono text-sm">{exp.company}</p>
                       </div>
                       <p className="font-mono text-xs text-muted-foreground flex-shrink-0 ml-4">
-                        {exp.startDate} — {exp.endDate ?? "Present"}
+                        {exp.startDate} to {exp.endDate ?? "Present"}
                       </p>
                     </div>
 
