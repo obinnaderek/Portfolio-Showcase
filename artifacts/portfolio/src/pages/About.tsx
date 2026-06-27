@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Target, Layers, BarChart3, Users } from "lucide-react";
+import { ArrowRight, Target, Layers, BarChart3, Users, BookOpen, Compass } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -8,10 +8,12 @@ const fadeUp = {
 };
 
 const principles = [
-  { icon: Target, title: "Infrastructure is product", desc: "Payment routing, uptime, and settlement aren't backend concerns — they're the product. Reliability is a feature." },
-  { icon: BarChart3, title: "Data-informed, not data-blind", desc: "Success rates, failure patterns, channel health — I track what matters and let the data surface where to dig." },
-  { icon: Layers, title: "Localisation is a strategy", desc: "Copying a product across markets doesn't work in Africa. Regulations, user habits, and partner ecosystems vary enormously." },
-  { icon: Users, title: "Operators are users too", desc: "Merchants, agents, and partner banks are as much my users as end consumers. I design for the full ecosystem." },
+  { icon: Target, title: "Diligence and prioritisation", desc: "I do the work properly or not at all. Every initiative I own gets structured thinking, clear requirements, and follow-through — because half-built things cost more than unstarted ones." },
+  { icon: BarChart3, title: "Data is not optional", desc: "I don't make decisions on gut feeling. Success rates, failure patterns, user behaviour, transaction flows — data is how I know what is actually happening versus what I think is happening. Without it, I'm guessing." },
+  { icon: Users, title: "Users are the final authority", desc: "You can pass every internal review and still be wrong. The only meaningful validation is users engaging with what you built, in the real world, under real conditions. I build toward that test, not away from it." },
+  { icon: BookOpen, title: "Constant learning is not a cliché", desc: "The payments industry, the regulatory landscape, and the technology underneath all of it are moving fast. A PM who stopped learning six months ago is already behind. I treat learning as part of the job, not a bonus activity." },
+  { icon: Layers, title: "Breadth makes you a better specialist", desc: "My work spans payments, Web3, lending, insurance, and savings products. That breadth is not a distraction — it gives me pattern recognition that a narrow specialist doesn't have, and it makes me harder to fool by complexity." },
+  { icon: Compass, title: "Understand before you build", desc: "Some of the most valuable work I have done has been deeply understanding a system before touching it. The instinct to build fast is real, but building on a misunderstood foundation is expensive. Discovery is not a delay." },
 ];
 
 export default function About() {
@@ -40,13 +42,16 @@ export default function About() {
           {/* Bio */}
           <motion.div custom={2} variants={fadeUp} initial="hidden" animate="visible" className="md:col-span-3 space-y-5">
             <p className="text-foreground leading-relaxed">
-              I'm a Product Manager with 5+ years of experience building and scaling payment infrastructure products across fintech and digital financial services in Africa. Based in Lagos, I've shipped products that process millions of transactions across Nigeria, Kenya, Tanzania, Ghana, and Uganda.
+              I'm a Product Manager with 5+ years of experience building and scaling payment infrastructure products across fintech and digital financial services in Africa. Based in Lagos, I've shipped products that serve millions of users across Nigeria, Kenya, Tanzania, Ghana, and Uganda — spanning offline and online acquiring, payment routing, EFT processing, collections, cross-border payments, and merchant solutions.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              My work spans offline and online acquiring, payment routing, EFT processing, collections, cross-border payments, web3 onchain marketplaces, and merchant payment solutions. I've led everything from NIBSS platform migrations to mobile money rollouts with Airtel Money, M-Pesa, and Tigo Pesa.
+              My path into product management started in operations. At UBA PLC, I was a second-level technical support specialist at the head office, responsible for POS and offline payment operations across 19 countries. I resolved merchant issues from across the continent daily — authorization failures, settlement discrepancies, terminal connectivity problems, card scheme escalations. That experience taught me exactly where payment systems break and why. But more than that, it taught me something more useful: that I didn't want to just resolve the problems. I wanted to understand them deeply enough to not build them in the first place.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Before moving into a pure PM role, I spent time in payment operations — maintaining 99.2% uptime across live POS and card payment channels. That experience gave me a ground-level understanding of where payment systems break and what reliability actually costs. It shapes every product decision I make today.
+              That is what moved me into product management. And it is the lens I bring to every product decision — the operational reality of what happens when things go wrong in production, with real merchants, real transactions, and real money on the line.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Beyond payments, I have worked on Web3 projects spanning DeFi, on-chain gaming marketplaces, and real-world asset tokenisation services. My product experience also extends across online acquiring, payment gateways, mobile wallets, electronic fund transfers, lending, insurance, digital savings products, and customer-facing financial services. The common thread is building financial infrastructure that works reliably for the people who depend on it.
             </p>
             <div className="pt-4">
               <Link href="/contact">
@@ -62,7 +67,7 @@ export default function About() {
         <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible">
           <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">How I Work</p>
           <h2 className="text-2xl font-bold text-foreground mb-8">Product principles</h2>
-          <div className="grid sm:grid-cols-2 gap-5">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
             {principles.map((p, i) => (
               <motion.div
                 key={p.title}
