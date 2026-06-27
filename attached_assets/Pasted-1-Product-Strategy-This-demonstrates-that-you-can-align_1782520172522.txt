@@ -1,0 +1,276 @@
+1. Product Strategy
+
+This demonstrates that you can align products with business objectives.
+
+Examples:
+
+Product strategy and vision
+Product roadmap planning
+Opportunity identification
+Product discovery
+Market analysis
+Competitive analysis
+Product positioning
+Business model design
+Go-to-market strategy
+Product lifecycle management
+2. Customer & User Research
+
+Show that you build products around user needs rather than assumptions.
+
+Examples:
+
+Customer interviews
+User journey mapping
+Persona development
+Jobs-to-be-Done (JTBD)
+Voice of Customer (VoC)
+Problem validation
+Requirements gathering
+Stakeholder interviews
+User story creation
+3. Product Design
+
+Even if you're not a designer, you should demonstrate collaboration with design teams.
+
+Examples:
+
+UX thinking
+Feature prioritization
+MVP definition
+Wireframing
+Prototyping
+User flow design
+Information architecture
+Design reviews
+Accessibility considerations
+4. Product Execution
+
+This is where your experience is strongest.
+
+Examples:
+
+Product requirement documentation (PRD)
+Feature specification
+Backlog management
+Sprint planning
+Agile delivery
+Scrum
+Kanban
+Release planning
+Product launch management
+Acceptance criteria definition
+5. Data & Analytics
+
+Companies increasingly expect PMs to make data-driven decisions.
+
+Examples:
+
+Product analytics
+KPI definition
+North Star metrics
+Funnel analysis
+Cohort analysis
+Retention analysis
+A/B testing
+Experiment design
+SQL (if applicable)
+Dashboard interpretation
+6. Technical Product Management
+
+Given your payments background, this should be a major section.
+
+Examples:
+
+API products
+REST APIs
+Payment gateway integration
+Payment orchestration
+Microservices understanding
+Event-driven architecture
+System integration
+ISO 8583
+ISO 20022
+Tokenization
+Payment switching
+Transaction routing
+Terminal management systems
+POS infrastructure
+Mobile money integration
+Card acquiring
+Online acquiring
+Webhooks
+SDK integration
+7. Payments Domain Expertise
+
+This is your differentiator. Many PMs don't have deep payments knowledge.
+
+Include areas such as:
+
+Merchant acquiring
+Agency banking
+Payment terminals
+Digital wallets
+QR payments
+Mobile money
+Card issuing
+Card acquiring
+Settlement and reconciliation
+Refunds
+Chargebacks
+Risk controls
+Fraud prevention
+Tokenization
+Payment security
+Cross-border payments
+Payment regulations
+Switching
+Payment processors
+8. Regulatory & Compliance
+
+A rare and valuable skill for fintech PMs.
+
+Examples:
+
+Regulatory product implementation
+Compliance management
+Risk assessment
+Audit readiness
+Regulatory stakeholder management
+Security requirements
+Financial compliance
+Data privacy
+9. Leadership & Stakeholder Management
+
+Senior PMs spend significant time influencing without direct authority.
+
+Examples:
+
+Cross-functional leadership
+Executive communication
+Stakeholder management
+Conflict resolution
+Decision making
+Negotiation
+Team facilitation
+Vendor management
+Partner management
+Change management
+Workshop facilitation
+10. Prioritization & Decision-Making
+
+Hiring managers want evidence that you can make difficult trade-offs.
+
+Examples:
+
+RICE prioritization
+MoSCoW prioritization
+Opportunity scoring
+Cost-benefit analysis
+Risk assessment
+Impact vs. effort analysis
+Trade-off analysis
+11. Delivery & Operations
+
+Especially relevant for payment infrastructure products.
+
+Examples:
+
+Incident management
+Production readiness
+Release management
+Operational excellence
+SLA management
+Service monitoring
+Root cause analysis
+Postmortems
+12. Commercial & Business Skills
+
+These show you understand the commercial side of products.
+
+Examples:
+
+Revenue optimization
+Pricing strategy
+Unit economics
+Profitability analysis
+P&L awareness
+ROI analysis
+Growth strategy
+Market expansion
+13. Communication
+
+Often overlooked, but critical.
+
+Examples:
+
+Executive presentations
+Product storytelling
+Product documentation
+Technical writing
+Requirement documentation
+Roadmap communication
+Product demos
+Training enablement
+14. AI & Modern Product Skills
+
+Increasingly expected for senior PM roles.
+
+Examples:
+
+AI product strategy
+Prompt engineering
+AI-assisted product discovery
+AI feature ideation
+Automation workflows
+Product experimentation
+Human-AI interaction design
+Skills That Match Your Experience
+
+Based on what you've shared over many conversations, your strongest capabilities include:
+
+Product Strategy
+Product Discovery
+Product Roadmapping
+Product Requirements Documentation (PRDs)
+Feature Prioritization
+Technical Product Management
+Payment Infrastructure
+Payment Gateway Integration
+Merchant Acquiring
+Agency Banking Products
+Online Acquiring
+POS Product Management
+Terminal Management Systems
+Payment Routing
+Tokenization
+Mobile Money Integration
+ISO 20022
+ISO 8583
+Regulatory Compliance
+Cross-functional Leadership
+Stakeholder Management
+API Integration
+Go-to-Market Planning
+Product Launch Management
+Risk Assessment
+Operational Excellence
+Data-driven Decision Making
+KPI Definition
+Product Analytics
+Agile Product Management
+Scrum
+Vendor & Partner Management
+International Product Expansion
+Incident & Release Management
+A final recommendation
+
+Instead of presenting a long list of skills, structure your portfolio around competencies supported by evidence. For example:
+
+Competency	Evidence
+Product Strategy	Led payment infrastructure strategy for regulatory compliance and market expansion across multiple African markets.
+Technical Product Management	Managed integrations with payment processors, banks, mobile money providers, and third-party APIs.
+Payments Expertise	Delivered POS acquiring, online acquiring, tokenization, recurring payments, BNPL, mobile money, and international card acceptance products.
+Product Delivery	Led end-to-end delivery from discovery and requirements through testing, launch, and post-launch optimization.
+Leadership	Coordinated engineering, compliance, operations, commercial teams, and external partners across multiple countries.
+Data & Optimization	Improved transaction success rates, optimized routing strategies, and monitored operational KPIs.
