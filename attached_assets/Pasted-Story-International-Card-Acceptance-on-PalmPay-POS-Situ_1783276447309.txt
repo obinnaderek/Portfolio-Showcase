@@ -1,0 +1,57 @@
+Story: International Card Acceptance on PalmPay POS
+
+Situation
+
+At PalmPay, I own the offline payment acceptance experience for POS merchants and agents. As our merchant network expanded, we noticed a recurring pain point, particularly from merchants in the hospitality sector such as hotels, restaurants, and businesses that served international customers.
+
+Problem
+
+These merchants couldn't accept foreign-issued Visa and Mastercard transactions on our POS terminals. This meant they were losing sales, directing customers elsewhere, or asking customers to use alternative payment methods. From a business perspective, this limited the competitiveness of our acquiring platform and affected merchant satisfaction.
+
+Notice what happened there.
+
+You didn't say:
+
+"The terminal couldn't process foreign cards."
+
+You said:
+
+"Merchants were losing revenue."
+
+That's product thinking.
+
+Discovery
+
+To better understand the problem, I worked closely with our merchant-facing teams and key merchants to validate the demand. We also engaged our acquiring partners and payment processors to understand the technical and regulatory constraints around international card acceptance.
+
+Again...
+
+Not:
+
+"I gathered requirements."
+
+Instead:
+
+"I validated demand."
+
+Your role
+
+Based on those insights, I led the product initiative to introduce international card acceptance on PalmPay POS. I coordinated with engineering, acquiring banks, payment processors, compliance, operations, and commercial teams to define the product requirements, prioritize the work, and ensure the solution met both customer needs and scheme requirements.
+
+See the difference?
+
+You're showing ownership.
+
+Execution
+
+We designed the transaction routing, settlement approach, processor integrations, certification activities, and operational processes required to support international card transactions while maintaining a seamless merchant experience.
+
+Notice...
+
+No deep technical jargon.
+
+Focus on business capability.
+
+Outcome
+
+The result was that PalmPay merchants, particularly those serving international customers, could now accept foreign-issued cards through the POS. This expanded merchant acceptance capabilities, improved the customer payment experience, strengthened PalmPay's acquiring proposition, and opened new transaction opportunities for merchants that previously couldn't be served.
